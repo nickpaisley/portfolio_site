@@ -55,3 +55,31 @@
 .aboutImage {
     max-width: 100%;
 }
+
+#navigation {
+    background-color: #e74c3c;
+    padding: 3px 5px;
+    z-index: 100;
+}
+
+#navigation li {
+    padding: 0 10px;
+}
+
+#navigation li a {
+    color: rgb(20, 19, 19); 
+}
+
+.navbar-brand,
+.navbar-brand {
+    color: rgb(19, 16, 16)
+}
+
+.nav-item-dropdown {
+    color: #e74c3c
+}
+
+.navbar-toggler-icon {
+    background: url(/img/icons/icons8-menu-64.png);
+    background-size: 100%;
+}
