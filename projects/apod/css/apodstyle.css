@@ -39,6 +39,10 @@ p {
     color: #fff; 
 
 }
+.navbar-toggler-icon {
+  background: url(/img/icons/icons8-menu-64.png);
+  background-size: 100%;
+}
 
 #pic {
     border-radius: 20px;
