@@ -6,6 +6,13 @@ gameScene.init = function (){
 
   //set player speed
   this.playerSpeed = 3;
+
+  //set enemy speed
+  this.enemy1Speed = 3;
+
+  //set boundaries
+  this.enemy1MinY = 80;
+  this.enemy1MaxY = 280;
 };
 
 //load assets
@@ -34,7 +41,8 @@ gameScene.create = function(){
   this.player.setScale(0.6, 0.6);
 
   //create the enemy
-  this.enemy1 = this.add.sprite(70, 250, 'enemy1');
+  this.enemy1 = this.add.sprite(120, this.sys.game.config.height / 2, 'enemy1');
+  this.enemy1.setScale(0.7, 0.7);
 
   //reverse enemy sprite position
   this.enemy1.flipX = true;
@@ -48,6 +56,19 @@ gameScene.create = function(){
   
   //update player/enemy positions/movement
   gameScene.update = function(){
+
+  //enemy movement
+  this.enemy1.y += this.enemy1Speed;
+
+  //enemy min y axis check
+  if(this.enemy1.y <= this.enemy1MinY){
+    this.enemy1Speed *= -1;
+  }
+
+  //enemy max y axis check
+  if(this.enemy1.y >= this.enemy1MaxY){
+    this.enemy1Speed *= -1;
+  }
        
   //check for active input
   if(this.input.activePointer.isDown){
