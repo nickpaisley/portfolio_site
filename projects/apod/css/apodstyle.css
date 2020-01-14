@@ -98,6 +98,10 @@ p {
     height: 150px;
   }
   
+#explanation { 
+  margin: 50px;
+}
+
   /* Add Animation - Zoom in the Modal */
   .modal-content, #caption {
     animation-name: zoom;
